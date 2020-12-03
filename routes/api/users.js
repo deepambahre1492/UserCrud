@@ -12,9 +12,9 @@ const User = require("../../models/User");
 router.post(
   "/",
   [
-    check("name", "Name is required").not().isEmpty().isLength({ min: 3, max: 20 }),
+    check("name", "Name is required").isLength({ min: 3, max: 20 }),
     check("email", "Please include a valid email").isEmail(),
-    check("phoneNumber", "Phone Number is required").not().isEmpty().isLength({ min: 10, max: 10 }),
+    check("phoneNumber", "Phone Number is required").isLength({ min: 10, max: 10 }),
     check(
       "password",
       "Please enter a password with 6 or more characters"
