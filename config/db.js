@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const db = "mongodb://localhost/ToTest";
-
+const dbLocal = "mongodb://localhost/UserCrud";
+const db = "mongodb+srv://deepambahre:deepambahre@usercrud.d1cyy.mongodb.net/UserCrud?retryWrites=true&w=majority";
 const connectDB = async () => {
   try {
     await mongoose.connect(db, {
